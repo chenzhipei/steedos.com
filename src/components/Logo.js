@@ -12,7 +12,7 @@ export function Logo(props) {
     //   height={40}
     //   width={128}
     // />
-    <img src="/logo.png" 
+    <img src="/yinlian.png" 
       className={props.className}
       height={40}
       width={128}

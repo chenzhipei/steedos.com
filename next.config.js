@@ -102,6 +102,7 @@ module.exports =
           },
         ],
         source: '/',
+        // destination: '/collections/steedos-packages',
         destination: '/hosts/steedos.cn',
       },
       // {

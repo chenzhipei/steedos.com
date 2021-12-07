@@ -211,7 +211,7 @@ export function Header({ site }) {
   
   return (
     <>
-      <div className="py-2 bg-gradient-to-r from-teal-600 to-light-blue-500 overflow-hidden">
+      {/* <div className="py-2 bg-gradient-to-r from-teal-600 to-light-blue-500 overflow-hidden">
         <div className="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <BannerMarkMobile className="sm:hidden absolute right-1/2 transform translate-x-[235px] translate-y-[-90px] w-[848px] h-[513px]" />
           <BannerMarkLeft className="hidden sm:block absolute right-1/2 transform translate-x-[-150px] translate-y-[-250px] w-[848px] h-[513px]" />
@@ -233,7 +233,7 @@ export function Header({ site }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
@@ -566,17 +566,7 @@ export function Header({ site }) {
                 </Menu>
                 }
                 {/* Cart */}
-                {userInfo.name && <div className="ml-4 flow-root lg:ml-6">
-                  <a href="/store/shopping-cart" className="group -m-2 p-2 flex items-center">
-                    <ShoppingBagIcon
-                      className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      aria-hidden="true"
-                    />
-                    <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">{cart?.lines?.length}</span>
-                    <span className="sr-only">items in cart, view bag</span>
-                  </a>
-                </div>
-                }
+                {userInfo.name}
               </div>
             </div>
           </div>

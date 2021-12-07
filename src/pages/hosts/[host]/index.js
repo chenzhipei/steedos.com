@@ -100,7 +100,7 @@ export default function Home(props) {
                 {homepage.summary}
                 </p>
                 <div className="mt-10 sm:mt-12">
-                  <form action="https://console.steedos.cn/accounts/a/#/signup" className="sm:max-w-xl sm:mx-auto lg:mx-0" target="_blank">
+                  <form action="https://cloud.ielc.chinaums.com/accounts/a/#/signup" className="sm:max-w-xl sm:mx-auto lg:mx-0" target="_blank">
                     <div className="sm:flex">
                       <div className="min-w-0 flex-1">
                         <label htmlFor="email" className="sr-only">
@@ -118,7 +118,7 @@ export default function Home(props) {
                         <button
                           type="button"
                           onClick={()=>{
-                            window.open(`https://console.steedos.cn/accounts/a/#/signup?mobile=${mobile}`);
+                            window.open(`https://cloud.ielc.chinaums.com/accounts/a/#/signup?mobile=${mobile}`);
                           }}
                           className="block w-full py-3 px-4 rounded-md shadow bg-indigo-500 text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
                         >
@@ -127,7 +127,8 @@ export default function Home(props) {
                       </div>
                     </div>
                     <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                    开始您的华炎魔方低代码之旅。 <a href="https://www.steedos.cn/docs/deploy/deploy-cloud" target="_blank">（阅读开通指南）</a>
+                    开始您的低代码之旅。
+                    {/* <a href="https://www.steedos.cn/docs/deploy/deploy-cloud" target="_blank">（阅读开通指南）</a> */}
                     {/* 点击提交表示您同意我们的
                       {' '}
                       <a href="#" className="font-medium text-white">

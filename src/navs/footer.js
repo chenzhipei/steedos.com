@@ -19,12 +19,8 @@ export const footerNav = [
     name: '应用市场',
     href: '/collections/steedos-packages',
     items: [
-      { name: '合同管理', href: '/products/contract' },
       { name: '流程审批', href: '/products/workflow' },
       { name: '项目管理', href: '/products/project' },
-      { name: '销售管理', href: '/products/crm' },
-      { name: '目标管理', href: '/products/okr' },
-      { name: '在线商城', href: '/products/shop' },
     ],
   },
   {

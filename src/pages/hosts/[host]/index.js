@@ -77,7 +77,9 @@ export default function Home(props) {
       </Head>
 
 
-      <div className="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+      <div className="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden bg-cover bg-center bg-no-repeat" style={{
+          backgroundImage: "url(https://cloud.ielc.chinaums.com/api/files/images/CbNazGFXX56B6TegM)"
+        }}>
         <div className="mx-auto max-w-7xl lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
             <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
@@ -140,16 +142,15 @@ export default function Home(props) {
                 </div>
               </div>
             </div>
-            <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
+            {/* <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-                {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                 <img
                   className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                   src={imageUrl}
                   alt=""
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

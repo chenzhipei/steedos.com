@@ -17,7 +17,7 @@ export const footerNav = [
   {
     id: 'apps',
     name: '应用市场',
-    href: '/collections/steedos-packages',
+    href: '/collections/ielc-packages',
     items: [
       { name: '流程审批', href: '/products/workflow' },
       { name: '项目管理', href: '/products/project' },

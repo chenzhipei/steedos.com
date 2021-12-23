@@ -30,6 +30,6 @@ export const headerNav = {
   ],
   pages: [
     { name: '云平台', href: '/collections/platform-cloud' },
-    { name: '应用市场', href: '/collections/steedos-packages' },
+    { name: '应用市场', href: '/collections/ielc-packages' },
   ],
 }

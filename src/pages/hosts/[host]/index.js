@@ -78,7 +78,7 @@ export default function Home(props) {
 
 
       <div className="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden bg-cover bg-center bg-no-repeat" style={{
-          backgroundImage: "url(https://cloud.ielc.chinaums.com/api/files/images/CbNazGFXX56B6TegM)"
+          backgroundImage: `url(${imageUrl})`
         }}>
         <div className="mx-auto max-w-7xl lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">

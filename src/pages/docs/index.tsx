@@ -27,7 +27,7 @@ const Collection: React.FC = (props: any) => {
   // console.log(`props`, props)
   const { collections } = props;
   const name = '文档中心';
-  const description = '欢迎使用华炎魔方低代码平台。';
+  const description = '欢迎使用银联云平台。';
   return (
     <>
       <NextSeo
@@ -41,7 +41,7 @@ const Collection: React.FC = (props: any) => {
           {name}
           </h2>
           <p className="prose max-w-xl mt-5 mx-auto text-xl text-gray-500">
-          欢迎使用华炎魔方低代码平台，您可以免费访问这里的文档。我们为商业用户提供VIP支持服务，<a href="/collections/services" target="_blank">了解更多</a>。
+          欢迎使用银联云平台，您可以免费访问这里的文档。我们为商业用户提供VIP支持服务。
           </p>
         </div>
       </div>

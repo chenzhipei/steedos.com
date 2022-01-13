@@ -25,3 +25,25 @@ Tailwind CSS uses [Next.js](https://nextjs.org/) for its documentation. Here is 
     ```sh
     yarn dev
     ```
+
+### 打包成docker镜像
+
+1、yarn
+
+2、执行build
+
+```
+yanr build
+```
+
+3、执行docker build
+
+```
+docker build -t steedos/yinlian.com:0.0.5 .
+```
+
+注意：-t 参数后加上需要打包成的镜像名（registry/name:tag）
+
+4、push
+
+打包后，会在本地生成image，需要手动推送到百度云仓库或者docker hub

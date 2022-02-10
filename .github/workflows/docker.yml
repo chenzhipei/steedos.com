@@ -49,11 +49,10 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
+          args: ${{ env.STEEDOS_SERVER_API_KEY }}
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.docker_meta.outputs.tags }}
-          secrets: |
-            STEEDOS_SERVER_API_KEY=${{ secrets.STEEDOS_SERVER_API_KEY}}
           labels: ${{ steps.docker_meta.outputs.labels }}
       
       - name: Configure AWS credentials

@@ -24,7 +24,7 @@ COPY ./prettier.config.js /app
 COPY ./redirects.json /app
 COPY ./tailwind.config.js /app
 COPY ./tsconfig.json /app
-# COPY ./yarn.lock /app
+COPY ./yarn.lock /app
 # COPY ./.next /app/.next
 
 ENV STEEDOS_SERVER_API_KEY=$API_TOKEN

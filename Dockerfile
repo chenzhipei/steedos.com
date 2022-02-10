@@ -29,7 +29,7 @@ COPY ./yarn.lock /app
 RUN --mount=type=secret,id=API_TOKEN \
    export STEEDOS_SERVER_API_KEY=$(cat /run/secrets/API_TOKEN)
 
-RUN echo "${env.STEEDOS_SERVER_API_KEY}"
+RUN echo $STEEDOS_SERVER_API_KEY
 # RUN npm config set registry http://registry.npm.taobao.org/
 # RUN yarn config set registry http://registry.npm.taobao.org/
 # ENV npm_config_sharp_binary_host="https://npm.taobao.org/mirrors/sharp"

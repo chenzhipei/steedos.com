@@ -4,8 +4,6 @@ FROM node:12.19.1
 ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-ENV STEEDOS_SERVER_API_KEY=${STEEDOS_SERVER_API_KEY}
-
 WORKDIR /app
 
 COPY ./packages /app/packages
@@ -36,7 +34,7 @@ COPY ./yarn.lock /app
 
 RUN yarn --force
 
-RUN echo "STEEDOS_SERVER_API_KEY----: ${STEEDOS_SERVER_API_KEY}"
+RUN echo "STEEDOS_SERVER_API_KEY----: ${env.STEEDOS_SERVER_API_KEY}"
 
 # RUN --mount=type=secret,id=STEEDOS_SERVER_API_KEY \
 #    export STEEDOS_SERVER_API_KEY=$(cat /run/secrets/STEEDOS_SERVER_API_KEY)

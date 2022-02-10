@@ -24,15 +24,15 @@ COPY ./prettier.config.js /app
 COPY ./redirects.json /app
 COPY ./tailwind.config.js /app
 COPY ./tsconfig.json /app
-COPY ./yarn.lock /app
+# COPY ./yarn.lock /app
 # COPY ./.next /app/.next
 
 ENV STEEDOS_SERVER_API_KEY=$API_TOKEN
 
 # RUN npm config set registry http://registry.npm.taobao.org/
 # RUN yarn config set registry http://registry.npm.taobao.org/
-ENV npm_config_sharp_binary_host="https://npm.taobao.org/mirrors/sharp"
-ENV npm_config_sharp_libvips_binary_host="https://npm.taobao.org/mirrors/sharp-libvips"
+# ENV npm_config_sharp_binary_host="https://npm.taobao.org/mirrors/sharp"
+# ENV npm_config_sharp_libvips_binary_host="https://npm.taobao.org/mirrors/sharp-libvips"
 
 RUN yarn
 

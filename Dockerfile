@@ -26,10 +26,10 @@ COPY ./tailwind.config.js /app
 COPY ./tsconfig.json /app
 COPY ./yarn.lock /app
 # COPY ./.next /app/.next
-RUN --mount=type=secret,id=STEEDOS_SERVER_API_KEY \
-   export STEEDOS_SERVER_API_KEY=$(cat /run/secrets/STEEDOS_SERVER_API_KEY)
+RUN --mount=type=secret,id=API_TOKEN \
+   export STEEDOS_SERVER_API_KEY=$(cat /run/secrets/API_TOKEN)
 
-RUN echo ${STEEDOS_SERVER_API_KEY}
+RUN echo "${env.STEEDOS_SERVER_API_KEY}"
 # RUN npm config set registry http://registry.npm.taobao.org/
 # RUN yarn config set registry http://registry.npm.taobao.org/
 # ENV npm_config_sharp_binary_host="https://npm.taobao.org/mirrors/sharp"

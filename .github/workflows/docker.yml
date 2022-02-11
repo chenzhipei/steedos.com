@@ -72,5 +72,6 @@ jobs:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ steps.docker_meta.outputs.tags }}
         run: |
+          docker pull steedos/steedos.com:latest
           docker tag steedos/steedos.com:latest ${{ env.ECR_REGISTRY }}/ivscode/steedos/steedos.com:latest
           docker push ${{ env.ECR_REGISTRY }}/ivscode/steedos/steedos.com:latest

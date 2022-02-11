@@ -72,7 +72,9 @@ jobs:
           docker tag steedos/steedos.com:latest ${{ env.ECR_REGISTRY }}/ivscode/steedos/steedos.com:latest
           docker push ${{ env.ECR_REGISTRY }}/ivscode/steedos/steedos.com:latest
           docker push ${{ env.ECR_REGISTRY }}/ivscode/steedos/steedos.com:${{github.ref_name}}
-      # - name: Deploy to EKS
-      #   run: |
-      #     kubectl apply -f deployment-k8s.yml
+      - name: verify deployment
+        uses: steebchen/kubectl@v2.0.0
+        with:
+          config: ${{ secrets.KUBE_CONFIG_DATA }}
+          command: apply -f deployment-k8s.yaml
           

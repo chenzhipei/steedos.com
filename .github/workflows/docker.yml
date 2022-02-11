@@ -68,10 +68,10 @@ jobs:
           IMAGE_TAG: ${{ steps.docker_meta.outputs.tags }}
         run: |
           docker pull steedos/steedos.com:latest
-          docker tag steedos/steedos.com:latest ${{ env.ECR_REGISTRY }}/ivscode/steedos/steedos.com:${{env.IMAGE_TAG[0]}}
+          docker tag steedos/steedos.com:latest ${{ env.ECR_REGISTRY }}/ivscode/steedos/steedos.com:${{github.ref_name}}
           docker tag steedos/steedos.com:latest ${{ env.ECR_REGISTRY }}/ivscode/steedos/steedos.com:latest
           docker push ${{ env.ECR_REGISTRY }}/ivscode/steedos/steedos.com:latest
-          docker push ${{ env.ECR_REGISTRY }}/ivscode/steedos/steedos.com:${{env.IMAGE_TAG[0]}}
+          docker push ${{ env.ECR_REGISTRY }}/ivscode/steedos/steedos.com:${{github.ref_name}}
       # - name: Deploy to EKS
       #   run: |
       #     kubectl apply -f deployment-k8s.yml

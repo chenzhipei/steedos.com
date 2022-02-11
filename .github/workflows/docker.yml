@@ -73,8 +73,9 @@ jobs:
           docker push ${{ env.ECR_REGISTRY }}/ivscode/steedos/steedos.com:latest
           docker push ${{ env.ECR_REGISTRY }}/ivscode/steedos/steedos.com:${{github.ref_name}}
       - name: verify deployment
-        uses: steebchen/kubectl@v2.0.0
+        uses: Consensys/kubernetes-action@master
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
-          config: ${{ secrets.KUBE_CONFIG_DATA }}
-          command: apply -f deployment-k8s.yaml
+          args: apply -f deployment-k8s.yaml
           

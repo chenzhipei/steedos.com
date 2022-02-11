@@ -48,7 +48,7 @@ jobs:
           context: .
           file: ./Dockerfile
           build-args: |
-            "API_TOKEN=${{ env.STEEDOS_SERVER_API_KEY }}"
+            "API_TOKEN=${{ secrets.STEEDOS_SERVER_API_KEY }}"
           platforms: linux/amd64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.docker_meta.outputs.tags }}
